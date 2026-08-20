@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <rect width="48" height="48" rx="10" fill="#08060d"/>
+  <circle cx="14" cy="30" r="2.6" fill="#ff3d6e"/>
+  <circle cx="21.5" cy="21.5" r="2.6" fill="#ff3d6e"/>
+  <circle cx="29" cy="13" r="2.6" fill="#ff3d6e"/>
+  <text x="12" y="39" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">rf</text>
+</svg>

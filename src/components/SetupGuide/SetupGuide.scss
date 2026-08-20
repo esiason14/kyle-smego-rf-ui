@@ -1,0 +1,188 @@
+@use '../../styles/variables' as *;
+
+%guide-card-surface {
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-bg;
+}
+
+.setup-guide {
+  margin-top: $space-10;
+
+  @media (max-width: $bp-mobile) {
+    margin-top: $space-6;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: normal;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 20px;
+    }
+  }
+
+  &__intro {
+    margin-top: $space-4;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-text;
+  }
+
+  &__divider {
+    margin: $space-10 0 $space-6;
+    border: 0;
+    border-top: 1px solid $color-border;
+
+    @media (max-width: $bp-mobile) {
+      margin: $space-6 0;
+    }
+  }
+
+  &__section-heading {
+    display: flex;
+    align-items: center;
+    gap: $space-6;
+    margin-bottom: $space-6;
+
+    h3 {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+
+  &__step + &__step {
+    margin-top: $space-6;
+  }
+
+  &__step-label {
+    margin-bottom: $space-2;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-text-secondary;
+
+    strong {
+      font-weight: 700;
+      color: $color-text-heading;
+    }
+  }
+}
+
+.base-settings-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-8;
+  min-height: 120px;
+  padding: $space-4 $space-6;
+  @extend %guide-card-surface;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-6;
+  }
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+    gap: $space-5;
+    padding: $space-5;
+  }
+
+  &__col {
+    padding: $space-2;
+
+    h4 {
+      font-size: $font-size-card-title;
+      font-weight: 700;
+      color: $color-text-heading;
+      line-height: normal;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: $font-size-card-desc;
+      font-weight: 400;
+      color: $color-text;
+      line-height: 1.55;
+    }
+  }
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: $space-6;
+  row-gap: $space-4;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.workflow-card,
+.portal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 120px;
+  padding: $space-6 $space-8;
+  @extend %guide-card-surface;
+  text-align: left;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+
+  @media (max-width: $bp-mobile) {
+    padding: $space-5;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+  }
+
+  h4 {
+    font-size: $font-size-card-title;
+    font-weight: 700;
+    color: $color-text-heading;
+  }
+
+  p {
+    font-size: $font-size-card-desc;
+    font-weight: 400;
+    color: $color-text;
+    line-height: 1.55;
+  }
+
+  &:hover {
+    border-color: $color-accent-border;
+    box-shadow: $shadow-card;
+  }
+}
+
+.workflow-card--add {
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  color: $color-text-heading;
+  font-size: $font-size-card-desc;
+  font-weight: 400;
+  border-style: solid;
+
+  &:hover {
+    background: $color-accent-bg;
+  }
+}
+
+.portal-card {
+  width: 341px;
+  max-width: 100%;
+
+  &__icon {
+    margin-bottom: $space-1;
+  }
+}

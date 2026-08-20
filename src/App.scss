@@ -1,0 +1,32 @@
+@use './styles/variables' as *;
+
+.app {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: $color-bg;
+  border: 1px solid $color-frame-border;
+
+  @media (max-width: $bp-tablet) {
+    flex-direction: column;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: $space-10 $space-12 $space-12;
+
+    @media (max-width: $bp-tablet) {
+      padding: $space-8 $space-6 $space-10;
+    }
+
+    @media (max-width: $bp-mobile) {
+      padding: $space-6 $space-4 $space-8;
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+      padding: $space-5 $space-3 $space-6;
+    }
+  }
+}

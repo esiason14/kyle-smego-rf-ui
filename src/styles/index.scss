@@ -1,0 +1,24 @@
+@use 'variables' as *;
+@use 'reset';
+
+html {
+  font: 15px/1.5 $font-sans;
+  color: $color-text;
+  background: $color-bg-subtle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-sans;
+  font-weight: 600;
+  color: $color-text-heading;
+}
+
+h1 {
+  font-weight: 300;
+}

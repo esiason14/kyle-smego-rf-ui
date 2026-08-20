@@ -1,0 +1,76 @@
+@use '../../styles/variables' as *;
+
+.event-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $space-5;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+    min-width: 0;
+
+    @media (max-width: $bp-mobile-sm) {
+      gap: $space-3;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    @media (max-width: $bp-mobile) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__title-block {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    min-width: 0;
+  }
+
+  &__name {
+    font-size: 32px;
+    line-height: normal;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__date,
+  &__location {
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-text;
+  }
+
+  &__edit {
+    flex-shrink: 0;
+    padding: $space-2 $space-4;
+    background: $color-accent;
+    color: $color-text-inverse;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    border-radius: $radius-sm;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background: $color-accent-dark;
+    }
+
+    @media (max-width: $bp-mobile) {
+      width: 100%;
+    }
+  }
+}

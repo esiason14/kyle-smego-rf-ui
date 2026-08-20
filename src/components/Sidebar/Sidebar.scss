@@ -1,0 +1,244 @@
+@use '../../styles/variables' as *;
+
+.sidebar {
+  display: flex;
+  flex-shrink: 0;
+  width: $sidebar-width;
+  min-height: 100vh;
+  background: $color-bg;
+  border-right: 1px solid $color-border;
+
+  @media (max-width: $bp-tablet) {
+    flex-direction: column;
+    width: 100%;
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__topbar {
+    display: none;
+
+    @media (max-width: $bp-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: $space-3 $space-5;
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+      padding: $space-3 $space-4;
+    }
+  }
+
+  &__topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+  }
+
+  &__menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: $radius-sm;
+    color: $color-text-heading;
+
+    &:hover {
+      background: $color-bg-subtle;
+    }
+  }
+
+  &__rail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: $sidebar-rail-width;
+    flex-shrink: 0;
+    min-height: 100%;
+    padding: $space-3 7.5px;
+    border-right: 1px solid $color-border;
+
+    @media (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__rail-top,
+  &__rail-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__rail-bottom {
+    padding: 4px 8px;
+  }
+
+  &__logo-button {
+    display: flex;
+    width: 48px;
+    padding: 8px 4px 24px 12px;
+    border-radius: 8px;
+    line-height: 0;
+
+    &:hover {
+      background: $color-bg-subtle;
+    }
+  }
+
+  &__rail-icon {
+    display: flex;
+    width: 48px;
+    padding: 4px 8px 8px;
+    border-radius: $radius-sm;
+    line-height: 0;
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: $radius-pill;
+    background: $color-avatar-bg;
+    color: $color-text-inverse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+
+  &__nav {
+    flex: 1;
+    min-width: 0;
+    padding: $space-3 $space-2;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $bp-tablet) {
+      display: none;
+      padding: $space-2 $space-5 $space-5;
+
+      &--open {
+        display: flex;
+      }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+      padding: $space-2 $space-4 $space-4;
+    }
+  }
+
+  &__header {
+    padding: $space-2 $space-2 $space-3;
+
+    @media (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-nav-header;
+    line-height: 18.2px;
+    font-weight: 600;
+    color: $color-text-heading;
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: $space-3;
+    font-size: $font-size-nav-detail;
+    line-height: 18.2px;
+    font-weight: 500;
+    color: $color-text-secondary;
+
+    &-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: $space-1;
+    padding: $space-1;
+    margin: 0 $space-2 $space-3;
+    background: $color-search-bg;
+    border-radius: $radius-sm;
+    color: $color-text-search;
+    outline-offset: 2px;
+
+    &:focus-within {
+      outline: 2px solid $color-accent-border;
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: none;
+      font-size: $font-size-nav-detail;
+      font-weight: 600;
+      line-height: 10px;
+      color: $color-text-search;
+
+      &::placeholder {
+        color: $color-text-search;
+      }
+    }
+  }
+
+  &__tree {
+    flex: 1;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    padding: $space-2 $space-3;
+    border-radius: $radius-md;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-text-muted;
+
+    &--active {
+      background: $color-nav-active-bg;
+      color: $color-accent;
+    }
+  }
+
+  &__dot {
+    flex-shrink: 0;
+  }
+
+  &__children {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 12px 12px 48px;
+  }
+
+  &__child {
+    display: block;
+    padding: $space-2 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-text-muted;
+    border-radius: $radius-sm;
+
+    &:hover {
+      color: $color-text-heading;
+    }
+  }
+}

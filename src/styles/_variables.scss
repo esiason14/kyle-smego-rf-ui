@@ -1,0 +1,66 @@
+// Design tokens
+
+// Brand
+$color-accent: #5c00dc; // Brand/Secondary Grape
+$color-accent-dark: #4600a8;
+$color-accent-bg: rgba(92, 0, 220, 0.08);
+$color-accent-bg-strong: rgba(92, 0, 220, 0.12);
+$color-accent-border: rgba(92, 0, 220, 0.5);
+
+// Text
+$color-text: #393551; // body text
+$color-text-secondary: #444444; // Neutral/G3
+$color-text-muted: #767676; // Neutral/G4 (inactive nav)
+$color-text-search: #777777;
+$color-text-heading: #222222; // Text/G1 Header
+$color-text-inverse: #ffffff;
+
+// Surfaces
+$color-bg: #ffffff;
+$color-bg-subtle: #faf9fb;
+$color-border: #cbc6de;
+$color-frame-border: #000000; // outer app frame stroke (Figma)
+$color-search-bg: #f5f5f5;
+$color-nav-active-bg: rgba(92, 0, 220, 0.08);
+
+// Avatar
+$color-avatar-bg: #444444;
+
+// Spacing
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-8: 32px;
+$space-10: 40px;
+$space-12: 48px;
+
+// Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-pill: 999px;
+
+// Layout
+$sidebar-rail-width: 63px;
+$sidebar-nav-width: 215px;
+$sidebar-width: $sidebar-rail-width + $sidebar-nav-width;
+
+// Breakpoints
+$bp-tablet: 900px;
+$bp-mobile: 600px;
+$bp-mobile-sm: 380px;
+
+// Typography
+$font-sans:
+  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  Arial, sans-serif;
+
+$font-size-nav-header: 14px;
+$font-size-nav-detail: 10px;
+$font-size-card-title: 13px;
+$font-size-card-desc: 12px;
+
+// Shadow
+$shadow-card: 0 1px 2px rgba(8, 6, 13, 0.04);
